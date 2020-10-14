@@ -120,4 +120,8 @@ img:hover {
   }
 }
 
-@media only screen and (max-width: 585px) {}
+@media only screen and (max-width: 585px) {
+  .zone {
+    padding: 30px 15px;
+  }
+}
