@@ -1,0 +1,123 @@
+html, body {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 5rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.btn-primary {
+  background-color: #C15412;
+  border-color: #C15412;
+}
+
+.btn-primary:hover {
+  background-color: #aa3b12;
+  border-color: #aa3b12;
+}
+
+.btn-primary:active {
+  background-color: #aa3b12;
+}
+
+.brn-primary:focus {
+  background-color: #aa3b12;
+}
+
+.zone {
+  padding: 30px 50px;
+  cursor: pointer;
+  display: grid;
+  color: #FFF;
+  font-size: 2em;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  transition: all 0.3s linear;
+}
+
+.navbar {
+  font-size: 1.25rem;
+}
+
+a.nav-link {
+  color: white;
+  height: auto;
+  line-height: 20px;
+}
+
+.zone:hover {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
+  -o-box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
+  box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
+}
+
+img:hover {
+  transform: scale(1.25);
+  transition: 0.5s ease-out;
+}
+
+/*https://paulund.co.uk/how-to-create-shiny-css-buttons*/
+/***********************************************************************
+ *  Black Background
+ **********************************************************************/
+.black {
+  background: black;
+  color: white;
+}
+
+/***********************************************************************
+ *  Red Background
+ **********************************************************************/
+.red {
+  height: 75vh;
+  background-image: url(./img/bg-image.jpeg);
+  background-size: cover;
+  background-position: center center;
+}
+
+.footer {
+  padding: 50px 0px;
+}
+
+.footer p {
+  line-height: 0.5;
+  font-size: 1rem;
+}
+
+/***********************************************************************
+ *  Grey Background
+ **********************************************************************/
+.grey {
+  height: auto;
+  background: #d3d3d3;
+}
+
+.container-grid {
+  display: grid;
+  grid-auto-flow: dense;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-rows: 1fr;
+  gap: 20px;
+}
+
+.grid-item>img {
+  width: 100%;
+  height: 100%;
+  max-height: auto;
+}
+
+/* Project Grid Tiles */
+/* Media Queries */
+@media only screen and (max-width: 767px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 585px) {}
