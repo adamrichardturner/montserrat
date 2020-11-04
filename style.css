@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   scroll-behavior: smooth;
   box-sizing: border-box;
   margin: 0;
@@ -9,6 +10,15 @@ h1 {
   font-size: 5rem;
   text-transform: uppercase;
   letter-spacing: 5px;
+}
+
+.grid-wrapper {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.full-width {
+  width: 100%;
 }
 
 .btn-primary {
@@ -57,7 +67,7 @@ a.nav-link {
   box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
 }
 
-img:hover {
+#projects img:hover {
   transform: scale(1.25);
   transition: 0.5s ease-out;
 }
@@ -90,6 +100,11 @@ img:hover {
   font-size: 1rem;
 }
 
+/* White Background */
+.dark-grey {
+  background: #A9A9A9;
+}
+
 /***********************************************************************
  *  Grey Background
  **********************************************************************/
@@ -110,6 +125,94 @@ img:hover {
   width: 100%;
   height: 100%;
   max-height: auto;
+}
+
+/* Demonstration Responsive Grid Template Areas */
+
+/* Desktop */
+.container-grid-magazine {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "f-bigport f-bigport a-square b-square "
+    "f-bigport f-bigport c-square d-square "
+    "f-bigport f-bigport e-land e-land "
+    "g-biglan g-biglan h-land h-land"
+    "g-biglan g-biglan h-land h-land";
+}
+
+/* Tablets */
+@media only screen and (max-width: 767px) {
+  .container-grid-magazine {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "a-square b-square"
+      "c-square d-square"
+      "e-land e-land"
+      "g-biglan g-biglan";
+  }
+
+  .f-big-portrait {
+    display: none;
+  }
+
+  .h-land {
+    display: none;
+  }
+}
+
+/* <= Large Mobiles */
+@media only screen and (max-width: 425px) {
+  .container-grid-magazine {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "b-square"
+      "a-square"
+      "c-square"
+      "d-square"
+      "e-land"
+      "g-biglan";
+  }
+}
+
+.container-grid-magazine img {
+  width: 100%;
+  height: 100%;
+  max-height: auto;
+}
+
+.a-square {
+  grid-area: a-square;
+}
+
+.b-square {
+  grid-area: b-square;
+}
+
+.c-square {
+  grid-area: c-square;
+}
+
+.d-square {
+  grid-area: d-square;
+}
+
+.e-land {
+  grid-area: e-land;
+}
+
+.f-big-portrait {
+  grid-area: f-bigport;
+}
+
+.g-big-landscape {
+  grid-area: g-biglan;
+}
+
+.h-land {
+  grid-area: h-land;
 }
 
 /* Project Grid Tiles */
